@@ -1,12 +1,7 @@
----
-aliases: [vite template notes]
-tags: [HTML, CSS, typescript]
-note type: Main
----
+# Lamar Blog Clone
 
-# Vite Template
-
-This template is a basic html css js template for that uses vite as it's module bundler. It's uses docker to start up the app. There are two folders at the main part of the project. The app folder and the dockerfiles folder. The app folder contains all of the source files for the project. Since docker is a dev environment there are no build docker files at all. In the app folder there is a folder named the src folder It has the files that are necessary. In the docker files folder there is a server docker file and an npm docker file. The main packages so far are `'vite- plugin-pug'` which allows you to inject pug into the html and `'windicss'` along with it's plugin.
+This is the clone of a blog site from webflow that i have implemented.
+The main colors that are used are just gray.
 
 To start up the server use the following command.
 
@@ -59,4 +54,4 @@ export default defineConfig({
 | layouts | main.pug, home.pug                                            |
 | mixins  | navbar.pug, container.pug                                     |
 | src     | main.ts, style.css                                            |
-| pages   | about.html                                                    |
+| pages   | about.html, contact.html, posts.html                          |
