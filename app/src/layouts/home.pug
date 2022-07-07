@@ -1,10 +1,111 @@
 extends ./main.pug
 
 include ../mixins/container.pug
+include ../mixins/right-arrow-icon.pug
+
+
+mixin postPreview(title, date, blogType)
+
+    .pt-2.pb-6.border-b-1.border-solid.border-gray-900(
+        class="grid gap-4 justify-items-start"
+    )
+
+        .text-3xl.font-bold #{title}
+
+        .font-bold.text-md.text-gray-400.flex.gap-x-3
+            
+            time.uppercase(datetime=date) #{date}
+
+            .h-full.bg-gray-400(class="w-0.5")
+
+            span.uppercase #{blogType}
+
+        if block 
+
+            p.font-thin.max-w-65ch(
+                w:lg="max-w-full"
+            )
+                block  
+        
+        else 
+            small.text-red-500 No paragraph to display here
+
+        button.rounded-full.p-2.text-md.flex.gap-4(
+            class="border-current border-solid border-1"
+        )
+            
+            span.font-thin Continue Reading
+
+            .w-6.h-6
+                
+                +rightArrowIcon
+
+            
+
 
 block main
 
-    +container("w-10/12")
-        h1.text-gray-700.px-4.py-6.text-center.
-            You are using windicss and vite 
+        ul.py-6.px-4.text-left(
+            w:lg="w-9/12 mx-auto"
+        )
 
+            +postPreview(
+                "Coffee variety macchiato as orgainic",
+                "June 25, 2020",
+                "Travel"
+            ).    
+                Saucer, crema carajillo, bar, mocha medium, latte cappuccino and espresso acerbic to go. Coffee, irish foam turkish coffee blue mountain seasonal. Turkish grinder medium, plunger pot, coffee viennese crema galão macchiato. Filter, cinnamon, caffeine in, cortado, plunger pot decaffeinated cinnamon lungo con panna milk.
+            
+            +postPreview(
+                "Wherever far wow thus a squirrel",
+                "June 25, 2020",
+                "ART"
+            ).
+            
+                Cup, caramelization viennese, cultivar macchiato flavour percolator ristretto frappuccino. Lungo extra macchiato cream chicory turkish caramelization.
+            +postPreview(
+                "According a funnily until animals",
+                "June 25, 2020",
+                "music"
+            ).
+                 
+                Single shot cultivar beans as chicory caffeine. Medium brewed, milk extra that froth pumpkin spice mocha. Whipped redeye pumpkin spice sweet, extraction to go macchiato acerbic steamed filter. Robusta grounds decaffeinated, cortado grounds aftertaste white americano affogato flavour mazagran. Aged eu, extraction, cup seasonal frappuccino in seasonal saucer wings.
+
+            +postPreview(
+                "Coffee sugar and chicory seasonal",
+                "June 25, 2020",
+                "music"
+            ).
+                 
+                Arista, percolator, cream, aromatic, fair trade, breve body instant lungo blue mountain cappuccino. Americano aroma mug espresso latte crema milk redeye acerbic. Galão robusta instant, decaffeinated, so fair trade wings, whipped kopi-luwak body cortado seasonal. Mug roast, café au lait affogato lungo viennese decaffeinated. Cultivar, redeye brewed seasonal, java as french press et sweet cup mazagran.
+            
+            +postPreview(
+                "Overlaid the jeepers uselessly twice",
+                "June 25, 2020",
+                "Tech"
+            ).
+                 
+                    Saucer dark cup french press. Barista beans, organic eu variety skinny acerbic flavour caffeine white. Steamed, plunger pot ut dripper decaffeinated, caramelization, sit barista mug con panna shop turkish.
+
+
+        .m-6
+
+        button.p-2.flex.rounded-sm(
+            class="border-current border-solid border-1 mx-auto"
+        )
+
+            span.font-thin More Posts
+
+            .m-1
+            
+            .w-6.h-6
+                +rightArrowIcon
+
+            
+        .m-6
+        
+
+
+
+
+        
