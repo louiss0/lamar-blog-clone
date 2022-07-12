@@ -1,46 +1,43 @@
-
+@windicss;
 
 
 body {
-    @apply bg-gray-50 text-center text-gray-900 leading-tight .; 
+  @apply bg-light-50 text-gray-900; 
+}
+
+:is(h1,h2,h3,h4,h5,h6){
+  @apply capitalize tracking-wide;
 }
 
 
-h1,h2,h3,h4,h5 h6{
-    @apply capitalize tracking-wide;
+h1{
+  @apply text-4xl ;
 }
-
-h1 {
-    @apply text-4xl;
+h2{
+  @apply text-3xl ;
 }
-h2 {
-    @apply text-3xl;
+h3{
+  @apply text-2xl ;
 }
-h3 {
-    @apply text-2xl;
+h4{
+  @apply text-xl ;
 }
-h4 {
-    @apply text-xl;
+h5{
+  @apply text-lg ;
 }
-h5 {
-    @apply text-lg;
-}
-h6 {
-    @apply text-base;
-}
-
-p{
-    @apply leading-relaxed tracking-wider max-w-96;
+h6{
+  @apply text-base ;
 }
 
 img{
-    @apply w-full object-cover; 
+  @apply object-cover ;
 }
 
-svg {
-    @apply w-full h-full fill-current;
+p{
+  @apply max-w-30ch
 }
-/* 
-<!-- ! Font Awesome Pro 6.1.1 by @fontawesome - https: //fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
 
-*/
+
+svg{
+  @apply w-full h-auto;
+}

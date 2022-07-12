@@ -1,5 +1,5 @@
-import "virtual:windi.css"
-import "./style.css"
+
+
 
 enum SelectedElements {
     MENU_TOGGLER = "#nav-dropdown-toggler",

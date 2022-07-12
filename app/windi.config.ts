@@ -8,6 +8,9 @@ export default defineConfig({
         prefix: "w",
         
     },
+    extract: {
+        include: ['src/**/*.{html,vue,jsx,tsx,svelte,pug}'],
+      },
     theme:{
         extend: {
             colors: {

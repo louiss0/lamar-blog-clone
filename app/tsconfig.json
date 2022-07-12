@@ -14,5 +14,5 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true
   },
-  "include": ["src", "src/vite-env.d.ts", "main.ts", "src/vite-env.d.ts", "main.ts"]
+  "include": ["src", "src/vite-env.d.ts", "main.ts", "src/vite-env.d.ts", "main.ts", "postcss.config.js"]
 }

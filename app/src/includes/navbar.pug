@@ -1,0 +1,80 @@
+include ../mixins/container.pug
+include ../mixins/bars-icon.pug
+
+
+
+- const links = ["home", "about", "posts", "contact"]
+    
+nav.text-gray-50.bg-gray-900.min-h-24.relative
+    
+    
+    +container(
+        "p-4 bg-inherit h-24 z-20 inset-0 flex justify-between items-center gap-8 relative"
+        )
+        
+        a.capitalize(href="/")
+            .text-2xl lamar
+        
+        ul.hidden(w:lg="flex gap-8 flex-1 items-center") 
+            
+            for link in links
+
+            
+
+                if link === 'home'
+                
+                    li.p-2 
+
+                        a(
+                            href="/"
+                            class="capitalize" 
+                            w:hover="text-gray-400" 
+                        ) #{link}
+                else 
+
+                    li.p-2 
+                
+                        a(
+                            href=`/src/pages/${link}.pug` 
+                            w:hover="text-gray-400" 
+                        ).capitalize #{link}
+    
+        button#nav-dropdown-toggler(
+            class="w-16 h-16 bg-gray-500 grid place-items-center"
+            w:lg="hidden"
+        )
+
+            .w-6.h-6
+                +barsIcon
+        
+    ul#nav-dropdown(
+        class="w-full left-0 z-10 transform -translate-y-full bg-inherit absolute" 
+        ) 
+            
+            for link in links
+
+            
+                if link === 'home'
+                
+                    li.h-20.p-2(class="grid place-items-center") 
+
+                        a(
+                            href="/" 
+                            class="capitalize"
+                        ) #{link === 'posts'? 'all posts': link }
+                else 
+
+                    li.h-20.p-2(
+                        class="text-gray-400 grid place-items-center"
+                        w:hover="text-gray-200" 
+                        ) 
+                
+                        a(
+                            href=`/src/pages/${link}.pug` 
+                            class="capitalize"
+                        ) #{link === 'posts'? 'all posts': link }
+
+
+
+
+                        
