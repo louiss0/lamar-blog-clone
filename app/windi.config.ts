@@ -17,6 +17,10 @@ export default defineConfig({
       },
     theme:{
         extend: {
+            fontFamily:{
+                heading: ["Domine", "sans-serif"],
+                body: ["Open Sans", "sans-serif"]
+            },
             colors: {
                 yellow: {
                     50: "#fefce8",
