@@ -10,7 +10,7 @@ nav.text-gray-50.bg-gray-900.min-h-24.relative
     
     +container(
         "p-4 bg-inherit h-24 z-20 inset-0 flex justify-between items-center gap-8 relative"
-        )
+        )(w:lg="w-10/12")
         
         a.capitalize(href="/")
             .text-2xl lamar
@@ -40,7 +40,7 @@ nav.text-gray-50.bg-gray-900.min-h-24.relative
                         ).capitalize #{link}
     
         button#nav-dropdown-toggler(
-            class="w-16 h-16 bg-gray-500 grid place-items-center"
+            class="bg-gray-500 h-16 grid w-16 place-items-center"
             w:lg="hidden"
         )
 
@@ -48,7 +48,7 @@ nav.text-gray-50.bg-gray-900.min-h-24.relative
                 +barsIcon
         
     ul#nav-dropdown(
-        class="w-full left-0 z-10 transform -translate-y-full bg-inherit absolute" 
+        class="bg-inherit w-full transform -translate-y-full left-0 z-10 absolute" 
         ) 
             
             for link in links
@@ -65,7 +65,7 @@ nav.text-gray-50.bg-gray-900.min-h-24.relative
                 else 
 
                     li.h-20.p-2(
-                        class="text-gray-400 grid place-items-center"
+                        class="grid text-gray-400 place-items-center"
                         w:hover="text-gray-200" 
                         ) 
                 

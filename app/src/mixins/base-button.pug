@@ -1,0 +1,13 @@
+include ./icons/right-arrow
+
+mixin baseButton(text, extraClasses="")
+
+    button.rounded-full.p-2.text-md.flex.gap-4(
+            class=`border-current border-solid border-1 ${extraClasses}`
+        )
+            
+            span.font-thin #{text}
+
+            .w-6.h-6
+                
+                +rightArrowIcon

@@ -1,3 +1,50 @@
 include ../mixins/container.pug 
+include ../mixins/icons/dribbble.pug 
+include ../mixins/icons/facebook.pug 
+include ../mixins/icons/instagram.pug 
+include ../mixins/icons/twitter.pug 
+include ../mixins/icons/envelope.pug 
+include ../mixins/icons/behance.pug 
+include ../mixins/icons/linked-in.pug 
+include ../mixins/icons/up-arrow.pug 
 
-footer 
+
+.pt-6.pb-8.px-4.bg-gray-900
+    +container("grid place-items-center gap-6 text-gray-900")(w:lg="flex justify-between w-5/6")
+        
+        ul.flex.gap-4 
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +facebook
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +twitter
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +dribbble
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +instagram
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +behance
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +linkedIn
+            
+            li.w-4.h-4.text-gray-400(w:hover="text-gray-600")
+                
+                +envelope
+
+        .flex.gap-2.text-gray-400.items-center
+            
+            .w-4.h-4
+                +upArrowIcon 
+
+            span.text-sm.uppercase go to top

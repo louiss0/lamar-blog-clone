@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "parcel serve src/index.pug",
+    "dev": "parcel serve 'src/*.pug' --lazy",
     "build": "tsc && parcel build",
     "preview": "vite preview"
   },

@@ -1,5 +1,6 @@
 import { defineConfig } from "windicss/helpers";
 
+import aspectRatio from "windicss/plugin/aspect-ratio"  
 
 
 
@@ -8,6 +9,9 @@ export default defineConfig({
         prefix: "w",
         
     },
+    plugins:[
+        aspectRatio
+    ],
     extract: {
         include: ['src/**/*.{html,vue,jsx,tsx,svelte,pug}'],
       },

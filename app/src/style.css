@@ -6,7 +6,7 @@ body {
 }
 
 :is(h1,h2,h3,h4,h5,h6){
-  @apply capitalize tracking-wide;
+  @apply tracking-wide capitalize;
 }
 
 
@@ -33,11 +33,10 @@ img{
   @apply object-cover ;
 }
 
-p{
-  @apply max-w-30ch
-}
+
 
 
 svg{
-  @apply w-full h-auto;
+  @apply h-full fill-current w-full;
+
 }

@@ -1,3 +1,65 @@
-extends ../layouts/main.pug 
+extends ../layouts/two-col-grid 
 
-block main 
+    
+
+block content
+
+
+    .grid.gap-4
+        
+        .grid.gap-8
+
+            h1 Get in touch
+
+            p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+
+
+        form.grid.gap-6.p-2
+            
+            .grid.gap-4
+            
+                label.uppercase.justify-self-start(for="name") Name
+            
+                input.py-2.px-4(
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    pattern="^\S+$" 
+                    w:border="1 current solid"
+                    placeholder="Enter your name"
+                    w:placeholder="gray-300"
+                ) 
+            
+            .grid.gap-4 
+            
+                label.uppercase.justify-self-start(for="email") Email
+
+                input.py-2.px-4(
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    pattern="^[A-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+$"
+                    w:border="1 current solid"
+                    placeholder="Enter your name"
+                    w:placeholder="gray-300"
+                ) 
+
+
+            .grid.gap-4 
+
+        
+                label.uppercase.justify-self-start(for="name") Message
+
+                textarea#message.py-2.px-4(
+                    name="message", 
+                    cols="15", 
+                    rows="6" 
+                    pattern="\S+"  
+                    w:border="1 solid"
+                )  Enter your message
+
+            button.py-2.px-4.rounded-sm.justify-self-start(
+                w:border="1 gray-500 solid"
+            )
+
+                span.text-lg Submit

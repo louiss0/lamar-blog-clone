@@ -1,44 +1,11 @@
-extends ./layouts/main.pug
+extends ./layouts/main
 
-include ./mixins/container.pug
-include ./mixins/right-arrow-icon.pug
+include ./mixins/container
+include ./mixins/base-button
+include ./mixins/spacer
+include ./mixins/post-preview
 
 
-mixin postPreview(title, date, blogType)
-
-    .pt-2.pb-6.border-b-1.border-solid.border-gray-900(
-        class="grid gap-4 justify-items-start"
-    )
-
-        .text-3xl.font-bold #{title}
-
-        .font-bold.text-md.text-gray-400.flex.gap-x-3
-            
-            time.uppercase(datetime=date) #{date}
-
-            .h-full.bg-gray-400(class="w-0.5")
-
-            span.uppercase #{blogType}
-
-        if block 
-
-            p.font-thin.max-w-65ch(
-                w:lg="max-w-full"
-            )
-                block  
-        
-        else 
-            small.text-red-500 No paragraph to display here
-
-        button.rounded-full.p-2.text-md.flex.gap-4(
-            class="border-current border-solid border-1"
-        )
-            
-            span.font-thin Continue Reading
-
-            .w-6.h-6
-                
-                +rightArrowIcon
 
             
 
@@ -46,7 +13,7 @@ mixin postPreview(title, date, blogType)
 block main
 
         ul.py-6.px-4.text-left(
-            w:lg="w-9/12 mx-auto"
+            w:lg="w-4/5 mx-auto"
         )
 
             +postPreview(
@@ -88,21 +55,11 @@ block main
                     Saucer dark cup french press. Barista beans, organic eu variety skinny acerbic flavour caffeine white. Steamed, plunger pot ut dripper decaffeinated, caramelization, sit barista mug con panna shop turkish.
 
 
-        .m-6
+        +spacer(8)
 
-        button.p-2.flex.rounded-sm(
-            class="border-current border-solid border-1 mx-auto"
-        )
-
-            span.font-thin More Posts
-
-            .m-1
-            
-            .w-6.h-6
-                +rightArrowIcon
-
-            
-        .m-6
+        +baseButton("More Posts", "gap-1 rounded-sm mx-auto")
+        
+        +spacer(6)
         
 
 

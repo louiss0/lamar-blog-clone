@@ -1,0 +1,45 @@
+
+extends ./main.pug
+
+include ../mixins/container
+include ../mixins/spacer
+
+
+
+block main 
+
+
+    +container("p-8 grid gap-4")(w:lg="grid-cols-[60%_40%]")
+        
+        .p-2
+            block content
+        
+        div
+            .border-1.border-solid.border-gray-900.rounded-sm.p-4
+                
+
+                figure.grid.place-items-center 
+                    
+                    img(
+                        class="rounded-full w-4/5"
+                        src="https://assets.website-files.com/5e4b1a13ea2f46a20ae99097/5e4b1a13ea2f46d955e990ea_photo-1441781748960-cde3a7202d3c-bw.jpg" 
+                        alt="profile pic"
+                        )
+                
+                .grid.gap-4.text-sm
+                
+                .font-bold Jonny Johnson
+
+                p.font-light.max-w-60ch The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place.
+
+                +spacer(2)            
+                
+                .grid.gap-4.text-sm
+                    
+                    .font-bold Something else here 
+
+                    p.font-light.max-w-60ch Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+
+                
+        
+

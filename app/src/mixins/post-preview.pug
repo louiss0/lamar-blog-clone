@@ -1,0 +1,31 @@
+
+include ./base-button
+
+
+mixin postPreview(title, date, blogType)
+
+    .pt-2.pb-6.border-b-1.border-solid.border-gray-900(
+        class="grid gap-4 justify-items-start"
+    )
+
+        .text-3xl.font-bold #{title}
+
+        .font-light.text-sm.text-gray-400.flex.gap-x-3
+            
+            time.uppercase(datetime=date) #{date}
+
+            .h-full.bg-gray-400(class="w-0.5")
+
+            span.uppercase #{blogType}
+
+        if block 
+
+            p.font-thin.max-w-65ch(
+                w:lg="max-w-full"
+            )
+                block  
+        
+        else 
+            small.text-red-500 No paragraph to display here
+
+        +baseButton("Continue Reading")
