@@ -1,8 +1,9 @@
 
 include ./base-button
 
+include ./icons/right-arrow
 
-mixin postPreview(title, date, blogType)
+mixin postPreview(title, date, blogType, href)
 
     .pt-2.pb-6.border-b-1.border-solid.border-gray-900(
         class="grid gap-4 justify-items-start"
@@ -28,4 +29,9 @@ mixin postPreview(title, date, blogType)
         else 
             small.text-red-500 No paragraph to display here
 
-        +baseButton("Continue Reading")
+        +baseButton(href)
+
+            span Continue Reading 
+
+            .w-6.h-6
+                +rightArrowIcon

@@ -1,0 +1,29 @@
+
+
+
+mixin introBox(title, date, type)
+
+    div
+        .pb-12.pt-4.border-b-1.border-gray-300.border-solid.grid.gap-6.grid.place-items-center
+
+            h1 #{title}
+
+            .flex.gap-4.text-md.text-gray-400
+                
+                span #{date}
+
+                .bg-gray-500(class="w-0.5")
+
+                span #{type}
+
+
+    
+    
+        if block 
+
+            .font-light.py-8.leading-normal
+                block 
+
+        else 
+
+            p.text-red-500 A paragraph is supposed to be displayed here

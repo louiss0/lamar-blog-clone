@@ -1,0 +1,38 @@
+
+extends ../layouts/main 
+
+include ../mixins/container 
+include ../mixins/icons/left-arrow 
+
+block header
+
+    +container("p-4")(w:lg="w-4/5")
+
+        block intro
+
+ 
+
+block main 
+
+
+    article 
+
+        +container("p-4")(w:lg="w-4/5")
+            
+            block article   
+
+
+    .py-8.grid.place-items-center
+
+        a.rounded-sm.py-4.px-7.flex.gap-1(
+            href="/src/pages/posts.pug"
+            w:border="1 gray-500 solid"
+            )
+
+
+            .w-5.h-5
+                +leftArrowIcon 
+
+            span View all posts 
+
+              

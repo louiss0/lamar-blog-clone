@@ -2,9 +2,16 @@
 
 @windicss;
 
+*, 
+*::before,
+*::after{
+
+  @apply m-0 p-0 ;
+}
+
 
 body {
-  @apply  font-body bg-light-50 text-gray-900; 
+  @apply  font-body bg-gray-50 text-gray-900; 
 }
 
 :is(h1,h2,h3,h4,h5,h6){
@@ -36,9 +43,13 @@ img{
 }
 
 
+ol {
+  @apply list-decimal;
+}
 
 
-svg{
-  @apply h-full fill-current w-full;
+svg { 
+  
+  @apply h-full fill-current w-full; 
 
 }

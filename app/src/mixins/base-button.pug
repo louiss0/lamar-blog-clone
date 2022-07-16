@@ -1,13 +1,16 @@
-include ./icons/right-arrow
 
-mixin baseButton(text, extraClasses="")
+mixin baseButton(href, extraClasses="")
 
-    button.rounded-full.p-2.text-md.flex.gap-4(
+    a.rounded-full.p-2.text-md.flex.gap-4&attributes(attributes)(
+            href=`${href}`
             class=`border-current border-solid border-1 ${extraClasses}`
         )
-            
-            span.font-thin #{text}
 
-            .w-6.h-6
+        if block 
+            block 
+
+        else 
+            p.text-red-500 No content to display here
+            
+
                 
-                +rightArrowIcon
