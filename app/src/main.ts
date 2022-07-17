@@ -56,7 +56,7 @@ function startApp() {
             
             navDropdownClassList.add(ControlledClasses.NEGATIVE_TRANSLATE_Y_100_PERCENT)
             
-            navDropdownClassList.remove(ControlledClasses.DROPDOWN_TRANSITION_SETUP)
+            navDropdownClassList.remove(...ControlledClasses.DROPDOWN_TRANSITION_SETUP.split(" "))
             
                 
             

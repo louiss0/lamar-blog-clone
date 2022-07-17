@@ -15,6 +15,13 @@ export default defineConfig({
     extract: {
         include: ['src/**/*.{html,vue,jsx,tsx,svelte,pug}'],
       },
+    safelist:[
+        "transition",
+        "-translate-x-full",
+        "transition-transform",
+        "-translate-y-full",
+        "duration-200"
+      ],
     theme:{
         extend: {
             fontFamily:{
